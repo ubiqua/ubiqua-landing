@@ -1,0 +1,30 @@
+# Compiled Source #
+###################
+*.pyc
+
+# OS generated files #
+######################
+.DS_Store*
+
+# Logs #
+########  
+*.log
+
+# Vim specific #
+################
+*.swp
+
+# Packages #
+############
+*.7z
+*.dmg
+*.iso
+*.gz
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Opened files #
+################
+*~
