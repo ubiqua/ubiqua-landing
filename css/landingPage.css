@@ -25,10 +25,9 @@ body {
 #project_name h1{
   font-family: 'Ubuntu', sans-serif;
   color: #F16B23;
-  display: inline-block;
   font-size: 52px;
   font-weight: normal;
-  margin-left: 18px;
+  display:block;
 }
 
 .ubiqua {
@@ -39,13 +38,20 @@ body {
 }
 
 #project_name img {
-  width: 230px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
 }
 
 #project_title {
   color: #fff;
 }
+.contenedor{
+  padding-right:10%;
+  padding-left:10%;
 
+}
 .linkBar {
   float: right;
   margin-right: 25px;
@@ -190,7 +196,20 @@ body {
   height:340px;
   max-height: 340px;
 }
+.explanation{
+  margin-top: 4%;
+  margin-right: 2%;
+  margin-left: 2%;
+  font-family:'Source Sans Pro', sans-serif;
+  text-shadow: 0 1px 0 white;
+  color: #666;
+  font-size: 15px;
+}
+.inputEmail{
+  width:50%;
+  height: 25px;
 
+}
 .rec {
   -webkit-box-shadow: inset 0px 1px 2px #1D1E44;
   -moz-box-shadow: inset 0px 1px 2px #1D1E44;
@@ -198,10 +217,14 @@ body {
   -ms-box-shadow: inset 0px 1px 2px #1D1E44;
   box-shadow: inset 0px 1px 2px #1D1E44;
   border-radius: 10px;
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   padding: 20px;
   background-color: #14447f;
   border-bottom: 1px solid #1f60af;
+  color: white;
+  font-size: 17px;
+  text-align: center;
 }
 
 .thanks {
@@ -220,8 +243,14 @@ body {
 
 .rec form {
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+.rec span{
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 .logo{
   height:60px;x
   width: 60px;
@@ -372,6 +401,7 @@ body {
   font-family:'helvetica', sans-serif;
   text-shadow: 0 1px 0 white;
   /*border:2px solid #154788;*/
+  line-height: 28px;
 }
 
 
