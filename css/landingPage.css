@@ -14,6 +14,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 #project_header hr {
@@ -197,16 +198,34 @@ body {
   max-height: 340px;
 }
 .explanation{
-  margin-top: 4%;
+  margin-top: 2%;
   margin-right: 2%;
   margin-left: 2%;
   font-family:'Source Sans Pro', sans-serif;
   text-shadow: 0 1px 0 white;
   color: #666;
   font-size: 15px;
+  text-align: center;
+}
+.bullet{
+  text-align: center;
+  margin-top: 1.5%;
+  font-family:'Source Sans Pro', sans-serif;
+  text-shadow: 0 1px 0 white;
+  color: #666;
+  font-size: 15px;
+  margin-left: 0px !important;
+}
+.bulletIcon{
+  font-size: 125px;
+}
+.moreInfo{
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 12.5px;
 }
 .inputEmail{
-  width:50%;
+  width:35%;
   height: 25px;
 
 }
@@ -223,7 +242,7 @@ body {
   background-color: #14447f;
   border-bottom: 1px solid #1f60af;
   color: white;
-  font-size: 17px;
+  font-size: 16px;
   text-align: center;
 }
 
