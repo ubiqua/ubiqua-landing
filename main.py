@@ -19,10 +19,23 @@ import os
 import webapp2
 from google.appengine.ext import db
 from google.appengine.ext.webapp import template
+from google.appengine.api import mail
+
+def send_confirmation_email(email):
+    message      = mail.EmailMessage(sender="ubiqua@ubiqua.me", subject="Gracias!")
+    message.to   = email 
+    message.bcc  = "ghurtado@ubiqua.me"
+    message.html = template.render("info_email.html", {})
+    message.body = template.render("info_email.txt", {})
+    message.send()
+
 
 class Lead(db.Model):
     email = db.EmailProperty(required=True)
     created_at = db.DateTimeProperty(auto_now_add=True)
+   
+    def is_valid(self):
+        return True
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -33,8 +46,11 @@ class MainHandler(webapp2.RequestHandler):
 
     def post(self):
         email = self.request.get("email").replace("%40", "@")
-        Lead(email=email).put() #Send email to admin
-
+        new_lead = Lead(email=email)
+        if new_lead.is_valid():
+            new_lead.put() #Send email to admin
+            send_confirmation_email(email)
+            #Add lead to highrise
 
 app = webapp2.WSGIApplication([
     ('.*', MainHandler)
