@@ -197,7 +197,7 @@
         $("#email-form").submit(function(){
             $.ajax({
                 url: '/',
-                method: 'POST',
+                type: 'POST',
                 data: { email: $("#email").val() },
                 success: function(data) {
                     toggle_email_field()    
