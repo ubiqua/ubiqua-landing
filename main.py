@@ -16,6 +16,7 @@
 #
 
 import os
+import re
 import webapp2
 from google.appengine.ext import db
 from google.appengine.ext.webapp import template
@@ -35,7 +36,8 @@ class Lead(db.Model):
     created_at = db.DateTimeProperty(auto_now_add=True)
    
     def is_valid(self):
-        return True
+        """Checks if email has @ and ."""
+        return re.match("[^@]+@[^@]+\.[^@]+", self.email) is not None 
 
 
 class MainHandler(webapp2.RequestHandler):
