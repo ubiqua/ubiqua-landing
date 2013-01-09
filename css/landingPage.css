@@ -258,6 +258,8 @@ body {
   padding: 20px;
   background-color: #14447f;
   border-bottom: 1px solid #1f60af;
+  color:white;
+  text-align: center;
 }
 
 .rec form {
