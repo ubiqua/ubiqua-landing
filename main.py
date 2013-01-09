@@ -32,7 +32,8 @@ class MainHandler(webapp2.RequestHandler):
         self.response.out.write(template.render(path, {}))
 
     def post(self):
-        Lead(email=self.request.get("email")).put()
+        email = self.request.get("email").replace("%40", "@")
+        Lead(email=email).put() #Send email to admin
 
 
 app = webapp2.WSGIApplication([
