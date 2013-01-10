@@ -39,10 +39,14 @@ class Lead(db.Model):
         """Checks if email has @ and ."""
         return re.match("[^@]+@[^@]+\.[^@]+", self.email) is not None 
 
+static_pages = {
+    'team':   'team.html',
+    'equipo': 'team.html'
+}
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        template_html = "landingpage.html"
+    def get(self, page_name=None):
+        template_html = static_pages.get(page_name, 'landingpage.html')
         path = os.path.join(os.path.dirname(__file__), (template_html))
         self.response.out.write(template.render(path, {}))
 
@@ -55,5 +59,6 @@ class MainHandler(webapp2.RequestHandler):
             #Add lead to highrise
 
 app = webapp2.WSGIApplication([
-    ('.*', MainHandler)
+    ('/([a-z]+)', MainHandler),
+    ('.*', MainHandler),
 ], debug=True)
