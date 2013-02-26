@@ -199,8 +199,6 @@ body {
 }
 .explanation{
   margin-top: 2%;
-  margin-right: 2%;
-  margin-left: 2%;
   font-family:'Source Sans Pro', sans-serif;
   text-shadow: 0 1px 0 white;
   color: #666;
@@ -215,6 +213,9 @@ body {
   color: #666;
   font-size: 15px;
   margin-left: 0px !important;
+  width: 25% !important;
+
+  width:auto;
 }
 .bulletIcon{
   font-size: 125px;
@@ -396,7 +397,10 @@ body {
     margin-right: 21%;
   }
 }
-
+@media (max-width: 767px) {
+.bullet{
+  width:auto !important;
+}}
 @media (max-width: 700px) {
   .buttonRegister{
     font-size: 14px;
